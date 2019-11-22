@@ -1,8 +1,8 @@
-#Typing Test
+# Typing Test
 This is a game that measures how fast you can type. It generates random words from an api. It will measure your typing speed in words per minute. It will also save and display your score.
-##Wireframe
+## Wireframe
 ![image](IMG_0400.JPG)
-##API Data
+## API Data
 ```    {
       "word": "example",
       "definitions": [
@@ -33,8 +33,8 @@ This is a game that measures how fast you can type. It generates random words fr
       ]
     }```
 
-##Features
+## Features
 - Area with words to be typed
 - Typing speed and average score, saved to user's computer
-###Stretch Goals
+### Stretch Goals
 - word definition and other info
