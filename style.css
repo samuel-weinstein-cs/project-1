@@ -17,15 +17,13 @@ body {
     font-size: 2rem;
     /* border: 1px solid red; */
     flex-basis: 75vw;
-
-
+    white-space: break-spaces;
+    overflow-wrap: break-word;
+    overflow:auto;
 }
 #score{
     /* border: 1px solid red; */
     flex-basis: 25vw;
-}
-.typed,.error,.untyped{
-    white-space: break-spaces;
 }
 .typed{
     color: black;
@@ -48,7 +46,10 @@ h1{
 #syllables{
     font-weight: bold;
 }
-#part-of-speech{
+.definition-number{
+    font-weight: bold;
+}
+.part-of-speech{
     font-style: italic;
 }
 .cursor-blink{
