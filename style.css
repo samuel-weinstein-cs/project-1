@@ -1,0 +1,27 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+#text{
+    font-size: 2rem;
+}
+#typed{
+    color: black;
+}
+#error{
+    color: red;
+}
+#untyped{
+    color: grey;
+}
+h1{
+    font-size: 3rem;
+}
+#dictionary{
+    font-size:1.5rem;
+}
+#syllables{
+    font-weight: bold;
+}
+#part-of-speech{
+    font-style: italic;
+}
