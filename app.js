@@ -1,826 +1,45 @@
-let text = "Call me Ishmael. Some years ago- never mind how long precisely- having little or no money in my purse, and nothing particular to interest me on shore, I thought I would sail about a little and see the watery part of the world."
+//let words = [{ "word": "half-altered", "syllables": { "count": 2, "list": ["half-al", "tered"] } }, { "word": "unapologizing", "syllables": { "count": 6, "list": ["un", "a", "pol", "o", "giz", "ing"] } }, { "rhymes": { "all": "-æzbəri" }, "word": "asbury", "syllables": { "count": 3, "list": ["As", "bur", "y"] }, "pronunciation": "'æz,bɛri", "frequency": 2.36 }, { "rhymes": { "all": "-ɑb" }, "word": "marybob", "pronunciation": {} }, { "rhymes": { "all": "-ɔɡɪʃ" }, "word": "road-hoggish", "pronunciation": {} }, { "word": "stunt pilot", "results": [{ "definition": "a pilot who travels around the country giving exhibits of stunt flying and parachuting", "partOfSpeech": "noun", "synonyms": ["barnstormer", "stunt flier"], "typeOf": ["airplane pilot", "pilot"] }] }, { "word": "plate modulation", "pronunciation": { "all": "pleɪt_,mɑdʒə'leɪʃən" } }, { "word": "john bach mcmaster", "results": [{ "definition": "United States historian who wrote a nine volume history of the people of the United States (1852-1932)", "partOfSpeech": "noun", "synonyms": ["mcmaster"], "instanceOf": ["historian", "historiographer"] }] }, { "word": "aeroelastic", "syllables": { "count": 5, "list": ["aer", "o", "e", "las", "tic"] }, "pronunciation": { "all": ",ɜroʊɪ'læstɪk" }, "frequency": 1.82 }, { "rhymes": { "all": "-ɪsənəbəl" }, "word": "listenable", "pronunciation": {}, "frequency": 1.6 }, { "rhymes": { "all": "-ɛltʃərz" }, "word": "melchers", "pronunciation": {} }, { "rhymes": { "all": "-æm" }, "word": "hierogram", "pronunciation": {} }, { "word": "dextroamphetamine sulfate", "pronunciation": { "all": ",dɛkstroʊæm'fɛtə,min_'səlfeɪt" } }, { "rhymes": { "all": "-aɪnd" }, "word": "basic-lined", "syllables": { "count": 2, "list": ["ba", "sic-lined"] }, "pronunciation": {} }, { "word": "nasolachrymal", "syllables": { "count": 5, "list": ["na", "so", "lach", "ry", "mal"] } }, { "word": "refined", "results": [{ "definition": "suggesting taste, ease, and wealth", "partOfSpeech": "adjective", "synonyms": ["elegant", "graceful"], "similarTo": ["gracious"] }, { "definition": "freed from impurities by processing", "partOfSpeech": "adjective", "synonyms": ["processed"], "antonyms": ["unrefined"], "examples": ["refined sugar", "refined oil", "to gild refined gold"] }, { "definition": "showing a high degree of refinement and the assurance that comes from wide social experience", "partOfSpeech": "adjective", "synonyms": ["polished", "urbane"], "similarTo": ["sophisticated"] }, { "definition": "precise to a fine degree", "partOfSpeech": "adjective", "similarTo": ["precise"], "examples": ["due to the limitations of the available tools, a more refined analysis of the data may be necessary"] }, { "definition": "(used of persons and their behavior) cultivated and genteel", "partOfSpeech": "adjective", "also": ["gracious", "polished", "elegant", "civilised", "fastidious", "civilized"], "similarTo": ["delicate", "effete", "finespun", "genteel", "gentlemanlike", "gentlemanly", "ladylike", "mincing", "niminy-piminy", "overrefined", "patrician", "polite", "prim", "suave", "superfine", "twee", "well-bred", "well-mannered", "civilised", "civilized", "couth", "cultivated", "cultured", "debonair", "debonaire", "debonnaire"], "antonyms": ["unrefined"], "examples": ["she was delicate and refined and unused to hardship", "refined people with refined taste"] }], "syllables": { "count": 2, "list": ["re", "fined"] }, "pronunciation": { "all": "rɪ'faɪnd" }, "frequency": 3.42 }, { "rhymes": { "all": "-ɛtərd" }, "word": "well-lettered", "pronunciation": {} }, { "word": "imputativeness", "syllables": { "count": 5, "list": ["im", "put", "a", "tive", "ness"] } }, { "word": "intercomparing", "syllables": { "count": 5, "list": ["in", "ter", "com", "par", "ing"] } }, { "word": "impassionedness", "syllables": { "count": 4, "list": ["im", "pas", "sioned", "ness"] } }];
+let words = [{ "word": "owens", "results": [{ "definition": "United States athlete and Black American whose success in the 1936 Olympic Games in Berlin outraged Hitler (1913-1980)", "partOfSpeech": "noun", "synonyms": ["james cleveland owens", "jesse owens"], "instanceOf": ["athlete", "jock"] }], "syllables": { "count": 2, "list": ["ow", "ens"] }, "pronunciation": { "all": "'oʊənz" }, "frequency": 3.33 }, { "word": "fireproof material", "pronunciation": { "all": "'faɪər,pruf_mə'tiriəl" } }, { "word": "ghostlier", "syllables": { "count": 3, "list": ["ghost", "li", "er"] } }, { "word": "shuck spray", "pronunciation": { "all": "ʃək_spreɪ" } }, { "word": "reink", "syllables": { "count": 2, "list": ["re", "ink"] } }, { "word": "walloon sword", "pronunciation": { "all": "wɑ'lun_soʊrd" } }, { "word": "new caledonian pine", "results": [{ "definition": "very tall evergreen of New Caledonia and the New Hebrides similar to norfolk island pine", "partOfSpeech": "noun", "synonyms": ["araucaria columnaris"], "typeOf": ["araucaria"] }] }, { "word": "gracefully", "results": [{ "definition": "in a gracious or graceful manner", "partOfSpeech": "adverb", "synonyms": ["graciously"], "antonyms": ["ungracefully"], "pertainsTo": ["graceful"] }, { "definition": "in a graceful manner", "partOfSpeech": null, "antonyms": ["gracelessly"], "pertainsTo": ["graceful"], "examples": ["she swooped gracefully"] }], "syllables": { "count": 3, "list": ["grace", "ful", "ly"] }, "pronunciation": "'ɡreɪsfʌli", "frequency": 3 }, { "word": "thirdly", "results": [{ "definition": "in the third place", "partOfSpeech": "adverb", "synonyms": ["third"] }], "syllables": { "count": 2, "list": ["third", "ly"] }, "pronunciation": "'θɝrdli", "frequency": 2.85 }, { "word": "bissextile year", "results": [{ "definition": "a calendar year with an extra day added in February", "partOfSpeech": "noun", "synonyms": ["366 days", "intercalary year", "leap year"], "typeOf": ["twelvemonth", "year", "yr"] }], "pronunciation": { "all": "baɪ'sɛkstɪl_jir" } }, { "word": "slangily", "results": [{ "definition": "with slang; in a slangy manner", "partOfSpeech": null, "pertainsTo": ["slangy"], "examples": ["he expresses himself slangily"] }], "syllables": { "count": 3, "list": ["slang", "i", "ly"] } }, { "word": "orthopaedics", "results": [{ "definition": "the branch of medical science concerned with disorders or deformities of the spine and joints", "partOfSpeech": "noun", "synonyms": ["orthopedics"], "hasCategories": ["traction"], "typeOf": ["medical science"], "derivation": ["orthopaedist"] }], "syllables": { "count": 4, "list": ["or", "tho", "pae", "dics"] }, "pronunciation": { "all": ",oʊrθə'pidɪks" }, "frequency": 1.97 }, { "word": "chicken colonel", "pronunciation": { "all": "'ʧɪkən_'kɜrnəl" } }, { "rhymes": { "all": "-æntɪn_livd" }, "word": "plantain-leaved", "pronunciation": {} }, { "word": "affirmably", "syllables": { "count": 4, "list": ["af", "firm", "a", "bly"] } }, { "word": "judgment day", "results": [{ "definition": "(New Testament) day at the end of time following Armageddon when God will decree the fates of all individual humans according to the good and evil of their earthly lives", "partOfSpeech": "noun", "synonyms": ["crack of doom", "day of judgement", "day of judgment", "day of reckoning", "doomsday", "end of the world", "eschaton", "judgement day", "last day", "last judgement", "last judgment"], "inCategory": ["new testament"], "typeOf": ["day"] }], "syllables": { "count": 2, "list": ["judg", "ment day"] }, "pronunciation": { "all": "'dʒədʒmənt_deɪ" } }, { "word": "total hysterectomy", "results": [{ "definition": "surgical removal of the uterus and cervix", "partOfSpeech": "noun", "typeOf": ["hysterectomy"] }] }, { "word": "wylie", "results": [{ "definition": "United States poet (1885-1928)", "partOfSpeech": "noun", "synonyms": ["elinor morton hoyt wylie"], "instanceOf": ["poet"] }], "pronunciation": "'waɪli", "frequency": 2.27 }, { "word": "gogetting", "syllables": { "count": 3, "list": ["go", "get", "ting"] } }, { "word": "nonheritable", "results": [{ "definition": "not inheritable", "partOfSpeech": "adjective", "synonyms": ["noninheritable"], "similarTo": ["acquired", "congenital", "inborn", "innate", "nonhereditary", "nontransmissible", "nurtural"] }], "syllables": { "count": 5, "list": ["non", "her", "it", "a", "ble"] } }]
+//let words = [];
+let text = ""
 let typedText = "";
 let cursorBlink = false;
 let startTime;
-let word =
-{
-    "word": "call",
-    "results": [
-        {
-            "definition": "assign a specified (usually proper) proper name to",
-            "partOfSpeech": "verb",
-            "synonyms": [
-                "be known as",
-                "know as",
-                "name"
-            ],
-            "typeOf": [
-                "label"
-            ],
-            "hasTypes": [
-                "baptise",
-                "christen",
-                "entitle",
-                "tag",
-                "style",
-                "rename",
-                "refer",
-                "nickname",
-                "term",
-                "title",
-                "baptize",
-                "dub"
-            ],
-            "verbGroup": [
-                "address"
-            ]
-        },
-        {
-            "definition": "make a prediction about; tell in advance",
-            "partOfSpeech": "verb",
-            "synonyms": [
-                "anticipate",
-                "forebode",
-                "foretell",
-                "predict",
-                "prognosticate",
-                "promise"
-            ],
-            "typeOf": [
-                "hazard",
-                "venture",
-                "guess",
-                "pretend"
-            ],
-            "hasTypes": [
-                "prophesy",
-                "wager",
-                "vaticinate",
-                "augur",
-                "bet",
-                "calculate",
-                "forecast",
-                "second-guess",
-                "outguess",
-                "read"
-            ]
-        },
-        {
-            "definition": "order, request, or command to come",
-            "partOfSpeech": "verb",
-            "synonyms": [
-                "send for"
-            ],
-            "typeOf": [
-                "enjoin",
-                "say",
-                "order",
-                "tell"
-            ],
-            "hasTypes": [
-                "call up",
-                "call in",
-                "call back",
-                "lift",
-                "mobilise",
-                "muster",
-                "hail",
-                "rally",
-                "summon",
-                "recall",
-                "beep",
-                "summons",
-                "cite",
-                "mobilize"
-            ],
-            "also": [
-                "call forth",
-                "call up"
-            ],
-            "derivation": [
-                "caller"
-            ],
-            "examples": [
-                "She was called into the director's office"
-            ]
-        },
-        {
-            "definition": "utter a sudden loud cry",
-            "partOfSpeech": "verb",
-            "synonyms": [
-                "cry",
-                "holler",
-                "hollo",
-                "scream",
-                "shout",
-                "shout out",
-                "squall",
-                "yell"
-            ],
-            "typeOf": [
-                "let loose",
-                "let out",
-                "emit",
-                "utter"
-            ],
-            "hasTypes": [
-                "pipe",
-                "hollo",
-                "screech",
-                "halloo",
-                "screak",
-                "shriek",
-                "shrill",
-                "skreak",
-                "skreigh",
-                "squawk",
-                "howl",
-                "hurrah",
-                "roar",
-                "ululate",
-                "wail",
-                "pipe up",
-                "whoop",
-                "yaup",
-                "yawl"
-            ],
-            "verbGroup": [
-                "call out",
-                "outcry",
-                "exclaim",
-                "cry",
-                "shout",
-                "cry out"
-            ],
-            "also": [
-                "call out"
-            ]
-        },
-        {
-            "definition": "pay a brief visit",
-            "partOfSpeech": "verb",
-            "synonyms": [
-                "call in",
-                "visit"
-            ],
-            "typeOf": [
-                "meet",
-                "get together"
-            ],
-            "hasTypes": [
-                "see",
-                "drop in",
-                "drop by",
-                "come by"
-            ],
-            "derivation": [
-                "caller"
-            ],
-            "examples": [
-                "The mayor likes to call on some of the prominent citizens"
-            ]
-        },
-        {
-            "definition": "the option to buy a given stock (or stock index or commodity future) at a given price before a given date",
-            "partOfSpeech": "noun",
-            "synonyms": [
-                "call option"
-            ],
-            "typeOf": [
-                "option"
-            ],
-            "partOf": [
-                "straddle",
-                "span"
-            ]
-        },
-        {
-            "definition": "a demand by a broker that a customer deposit enough to bring his margin up to the minimum requirement",
-            "partOfSpeech": "noun",
-            "synonyms": [
-                "margin call"
-            ],
-            "typeOf": [
-                "demand"
-            ]
-        },
-        {
-            "definition": "a demand especially in the phrase",
-            "partOfSpeech": "noun",
-            "synonyms": [
-                "claim"
-            ],
-            "typeOf": [
-                "demand"
-            ],
-            "examples": [
-                "the call of duty"
-            ]
-        },
-        {
-            "definition": "a telephone connection",
-            "partOfSpeech": "noun",
-            "synonyms": [
-                "phone call",
-                "telephone call"
-            ],
-            "typeOf": [
-                "telephone",
-                "telephony"
-            ],
-            "hasTypes": [
-                "trunk call",
-                "local call",
-                "long distance",
-                "long-distance call",
-                "collect call",
-                "conference call",
-                "crank call",
-                "call-in",
-                "call-back",
-                "wake-up call"
-            ],
-            "examples": [
-                "she reported several anonymous calls",
-                "he placed a phone call to London",
-                "he heard the phone ringing but didn't want to take the call"
-            ]
-        },
-        {
-            "definition": "a loud utterance; often in protest or opposition",
-            "partOfSpeech": "noun",
-            "synonyms": [
-                "cry",
-                "outcry",
-                "shout",
-                "vociferation",
-                "yell"
-            ],
-            "typeOf": [
-                "utterance",
-                "vocalization"
-            ],
-            "hasTypes": [
-                "hosanna",
-                "bellow",
-                "bellowing",
-                "bird",
-                "blue murder",
-                "boo",
-                "bronx cheer",
-                "catcall",
-                "clamor",
-                "clamoring",
-                "clamour",
-                "clamouring",
-                "halloo",
-                "hiss",
-                "holla",
-                "holler",
-                "hollering",
-                "hollo",
-                "holloa",
-                "hoot",
-                "hue and cry",
-                "noise",
-                "rallying cry",
-                "raspberry",
-                "razz",
-                "razzing",
-                "roar",
-                "roaring",
-                "scream",
-                "screaming",
-                "screech",
-                "screeching",
-                "shouting",
-                "shriek",
-                "shrieking",
-                "snort",
-                "war cry",
-                "war whoop",
-                "whoop",
-                "yelling",
-                "yodel",
-                "yowl",
-                "battle cry"
-            ]
-        },
-        {
-            "definition": "greet, as with a prescribed form, title, or name",
-            "partOfSpeech": "verb",
-            "synonyms": [
-                "address"
-            ],
-            "typeOf": [
-                "address",
-                "turn to"
-            ],
-            "verbGroup": [
-                "know as",
-                "be known as",
-                "name"
-            ],
-            "examples": [
-                "She calls him by first name"
-            ]
-        },
-        {
-            "definition": "demand payment of (a loan)",
-            "partOfSpeech": "verb",
-            "synonyms": [
-                "call in"
-            ],
-            "typeOf": [
-                "exact",
-                "demand"
-            ],
-            "derivation": [
-                "callable"
-            ]
-        },
-        {
-            "definition": "give the calls (to the dancers) for a square dance",
-            "partOfSpeech": "verb",
-            "synonyms": [
-                "call off"
-            ],
-            "entails": [
-                "square dance"
-            ],
-            "derivation": [
-                "caller"
-            ]
-        },
-        {
-            "definition": "get or try to get into communication (with someone) by telephone",
-            "partOfSpeech": "verb",
-            "synonyms": [
-                "call up",
-                "phone",
-                "ring",
-                "telephone"
-            ],
-            "inCategory": [
-                "telephone",
-                "telephony"
-            ],
-            "entails": [
-                "dial"
-            ],
-            "typeOf": [
-                "telecommunicate"
-            ],
-            "hasTypes": [
-                "call in",
-                "cell phone"
-            ],
-            "derivation": [
-                "caller"
-            ],
-            "examples": [
-                "I tried to call you all night",
-                "Take two aspirin and call me in the morning"
-            ]
-        },
-        {
-            "definition": "the characteristic sound produced by a bird",
-            "partOfSpeech": "noun",
-            "synonyms": [
-                "birdcall",
-                "birdsong",
-                "song"
-            ],
-            "typeOf": [
-                "animal communication"
-            ],
-            "hasTypes": [
-                "bell-like call",
-                "two-note call"
-            ]
-        },
-        {
-            "definition": "make a demand, as for a card or a suit or a show of hands",
-            "partOfSpeech": "verb",
-            "synonyms": [
-                "bid"
-            ],
-            "inCategory": [
-                "cards",
-                "card game"
-            ],
-            "typeOf": [
-                "play"
-            ],
-            "hasTypes": [
-                "underbid",
-                "preempt",
-                "raise",
-                "overbid",
-                "double",
-                "outcall",
-                "outbid"
-            ],
-            "derivation": [
-                "caller"
-            ],
-            "examples": [
-                "He called his trump"
-            ]
-        },
-        {
-            "definition": "a brief social visit",
-            "partOfSpeech": "noun",
-            "typeOf": [
-                "visit"
-            ],
-            "examples": [
-                "senior professors' wives no longer make afternoon calls on newcomers",
-                "the characters in Henry James' novels are forever paying calls on each other, usually in the parlor of some residence"
-            ]
-        },
-        {
-            "definition": "a demand for a show of hands in a card game",
-            "partOfSpeech": "noun",
-            "typeOf": [
-                "demand"
-            ],
-            "partOf": [
-                "cards",
-                "card game"
-            ],
-            "examples": [
-                "after two raises there was a call"
-            ]
-        },
-        {
-            "definition": "an instruction that interrupts the program being executed",
-            "partOfSpeech": "noun",
-            "typeOf": [
-                "program line",
-                "statement",
-                "command",
-                "instruction"
-            ],
-            "hasTypes": [
-                "supervisor call instruction",
-                "function call",
-                "system call"
-            ],
-            "examples": [
-                "Pascal performs calls by simply giving the name of the routine to be executed"
-            ]
-        },
-        {
-            "definition": "a request",
-            "partOfSpeech": "noun",
-            "typeOf": [
-                "asking",
-                "request"
-            ],
-            "hasTypes": [
-                "recall"
-            ],
-            "examples": [
-                "many calls for Christmas stories",
-                "not many calls for buggywhips"
-            ]
-        },
-        {
-            "definition": "ascribe a quality to or give a name of a common noun that reflects a quality",
-            "partOfSpeech": "verb",
-            "typeOf": [
-                "label"
-            ],
-            "hasTypes": [
-                "brand",
-                "post",
-                "misname",
-                "miscall"
-            ],
-            "verbGroup": [
-                "be known as",
-                "know as",
-                "name"
-            ],
-            "examples": [
-                "He called me a bastard",
-                "She called her children lazy and ungrateful"
-            ]
-        },
-        {
-            "definition": "a special disposition (as if from a divine source) to pursue a particular course",
-            "partOfSpeech": "noun",
-            "typeOf": [
-                "inclination",
-                "tendency",
-                "disposition"
-            ]
-        },
-        {
-            "definition": "a visit in an official or professional capacity",
-            "partOfSpeech": "noun",
-            "typeOf": [
-                "visit"
-            ],
-            "hasTypes": [
-                "round"
-            ],
-            "examples": [
-                "the pastor's calls on his parishioners",
-                "the salesman's call on a customer"
-            ]
-        },
-        {
-            "definition": "call a meeting; invite or command to meet",
-            "partOfSpeech": "verb",
-            "cause": [
-                "meet",
-                "forgather",
-                "foregather",
-                "gather",
-                "assemble"
-            ],
-            "typeOf": [
-                "call for",
-                "ask for",
-                "bespeak",
-                "request",
-                "quest"
-            ],
-            "verbGroup": [
-                "send for"
-            ],
-            "derivation": [
-                "caller"
-            ],
-            "examples": [
-                "The Wannsee Conference was called to discuss the `Final Solution'",
-                "The new dean calls meetings every week"
-            ]
-        },
-        {
-            "definition": "challenge (somebody) to make good on a statement; charge with or censure for an offense",
-            "partOfSpeech": "verb",
-            "typeOf": [
-                "dispute",
-                "gainsay",
-                "challenge"
-            ],
-            "examples": [
-                "He deserves to be called on that"
-            ]
-        },
-        {
-            "definition": "challenge the sincerity or truthfulness of",
-            "partOfSpeech": "verb",
-            "typeOf": [
-                "gainsay",
-                "dispute",
-                "challenge"
-            ],
-            "examples": [
-                "call the speaker on a question of fact"
-            ]
-        },
-        {
-            "definition": "consider or regard as being",
-            "partOfSpeech": "verb",
-            "typeOf": [
-                "see",
-                "reckon",
-                "regard",
-                "consider",
-                "view"
-            ],
-            "examples": [
-                "I would not call her beautiful"
-            ]
-        },
-        {
-            "definition": "declare in the capacity of an umpire or referee",
-            "partOfSpeech": "verb",
-            "typeOf": [
-                "hold",
-                "adjudge",
-                "declare"
-            ],
-            "examples": [
-                "call a runner out"
-            ]
-        },
-        {
-            "definition": "indicate a decision in regard to",
-            "partOfSpeech": "verb",
-            "inCategory": [
-                "athletics",
-                "sport"
-            ],
-            "typeOf": [
-                "indicate"
-            ],
-            "examples": [
-                "call balls and strikes behind the plate"
-            ]
-        },
-        {
-            "definition": "lure by imitating the characteristic call of an animal",
-            "partOfSpeech": "verb",
-            "typeOf": [
-                "tempt",
-                "lure",
-                "entice"
-            ]
-        },
-        {
-            "definition": "make a stop in a harbour",
-            "partOfSpeech": "verb",
-            "typeOf": [
-                "stop over",
-                "stop"
-            ],
-            "verbGroup": [
-                "call in",
-                "visit"
-            ],
-            "examples": [
-                "The ship will call in Honolulu tomorrow"
-            ]
-        },
-        {
-            "definition": "order or request or give a command for",
-            "partOfSpeech": "verb",
-            "typeOf": [
-                "order"
-            ],
-            "examples": [
-                "The unions called a general strike for Sunday"
-            ]
-        },
-        {
-            "definition": "order, summon, or request for a specific duty or activity, work, role",
-            "partOfSpeech": "verb",
-            "typeOf": [
-                "request"
-            ],
-            "verbGroup": [
-                "send for"
-            ],
-            "derivation": [
-                "calling"
-            ],
-            "examples": [
-                "He was already called 4 times for jury duty",
-                "They called him to active military duty"
-            ]
-        },
-        {
-            "definition": "read aloud to check for omissions or absentees",
-            "partOfSpeech": "verb",
-            "typeOf": [
-                "read"
-            ]
-        },
-        {
-            "definition": "require the presentation of for redemption before maturation",
-            "partOfSpeech": "verb",
-            "typeOf": [
-                "expect",
-                "require",
-                "ask"
-            ],
-            "verbGroup": [
-                "call in"
-            ]
-        },
-        {
-            "definition": "rouse somebody from sleep with a call",
-            "partOfSpeech": "verb",
-            "typeOf": [
-                "arouse",
-                "wake",
-                "wake up",
-                "awaken",
-                "rouse",
-                "waken"
-            ],
-            "examples": [
-                "I was called at 5 A.M. this morning"
-            ]
-        },
-        {
-            "definition": "send a message or attempt to reach someone by radio, phone, etc.; make a signal to in order to transmit a message",
-            "partOfSpeech": "verb",
-            "inCategory": [
-                "telecom",
-                "telecommunication"
-            ],
-            "typeOf": [
-                "telecommunicate"
-            ],
-            "verbGroup": [
-                "phone",
-                "telephone",
-                "ring",
-                "call up"
-            ],
-            "examples": [
-                "Hawaii is calling!",
-                "A transmitter in Samoa was heard calling"
-            ]
-        },
-        {
-            "definition": "(sports) the decision made by an umpire or referee",
-            "partOfSpeech": "noun",
-            "inCategory": [
-                "athletics",
-                "sport"
-            ],
-            "typeOf": [
-                "determination",
-                "conclusion",
-                "decision"
-            ],
-            "examples": [
-                "he was ejected for protesting the call"
-            ]
-        },
-        {
-            "definition": "stop or postpone because of adverse conditions, such as bad weather",
-            "partOfSpeech": "verb",
-            "typeOf": [
-                "set back",
-                "put off",
-                "prorogue",
-                "postpone",
-                "remit",
-                "put over",
-                "table",
-                "defer",
-                "shelve",
-                "hold over"
-            ],
-            "examples": [
-                "call a football game"
-            ]
-        },
-        {
-            "definition": "utter a characteristic note or cry",
-            "partOfSpeech": "verb",
-            "typeOf": [
-                "let out",
-                "emit",
-                "utter",
-                "let loose"
-            ],
-            "examples": [
-                "bluejays called to one another"
-            ]
-        },
-        {
-            "definition": "utter in a loud voice or announce",
-            "partOfSpeech": "verb",
-            "typeOf": [
-                "let loose",
-                "emit",
-                "utter",
-                "let out"
-            ],
-            "verbGroup": [
-                "scream",
-                "yell",
-                "hollo",
-                "shout",
-                "cry",
-                "shout out",
-                "squall",
-                "holler"
-            ],
-            "derivation": [
-                "caller"
-            ],
-            "examples": [
-                "He called my name",
-                "The auctioneer called the bids"
-            ]
-        }
-    ],
-    "syllables": {
-        "count": 1,
-        "list": [
-            "call"
-        ]
-    },
-    "pronunciation": {
-        "all": "kɔl"
-    },
-    "frequency": 5.93
-}
-window.onload = function () {
+const API_KEY = "153acece76mshf5d8ae199da13d7p145b8ejsnf8b9be3122ee";
+const BASE_URL = "https://wordsapiv1.p.mashape.com/words/"
+window.onload = async function () {
+    //let word = await axios.get(`${BASE_URL}?random=true`, { headers: { "X-Mashape-Key": API_KEY } })
+    //console.log(word);
+    /*
+    for (let i = 0; i < 20; i++) {//create 20 words
+        let word = await axios.get(`${BASE_URL}?random=true`, { headers: { "X-Mashape-Key": API_KEY } });
+        words.push(word.data);
+        text += word.data.word + " ";
+
+    }
+    console.log(JSON.stringify(words));
+    /*/
+    for (let i = 0; i < 20; i++) {
+        text += words[i].word + " ";
+    }
+    //*/
     render();
     startTime = new Date();
-    dictionary(word);
+
+
+    //dictionary(words[0]);
+    //console.log("got here lmao");
     document.addEventListener("keydown", function (e) {
+        e.preventDefault();
+
+        let wordIndex = -1;
+        let textLength = typedText.length + 2;
+        do {
+            wordIndex++;
+            textLength -= words[wordIndex].word.length + 1;
+        } while (textLength > 0);
+        dictionary(words[wordIndex]);
+
         if (e.key.length === 1) {//if the key pressed is a single character
             //write to the text
             typedText += e.key;
@@ -832,6 +51,8 @@ window.onload = function () {
         // console.log(typedText);
         render();
     });
+    setInterval(blink, 250);
+    setInterval(wordsPerMinute, 1000 / 60);
 }
 function render() {
     const textDiv = document.querySelector("#text");
@@ -870,13 +91,19 @@ function dictionary(word) {
     dictionary.innerHTML = "";//clear the div
     syllables.id = "syllables";
     pronunciation.id = "pronunciation";
-    for (let i = 0; i < word.syllables.count; i++) {
-        syllables.textContent += word.syllables.list[i];
-        if (word.syllables.count - 1 !== i) {
-            syllables.textContent += "·";
+    if (word.syllables) {
+        for (let i = 0; i < word.syllables.count; i++) {
+            syllables.textContent += word.syllables.list[i];
+            if (word.syllables.count - 1 !== i) {
+                syllables.textContent += "·";
+            }
         }
+    } else {
+        syllables.textContent = word.word;
     }
-    if (word.pronunciation) { pronunciation.textContent = `/${word.pronunciation.all}/`; }
+    if (word.pronunciation && word.pronunciation.all) {
+        pronunciation.textContent = `/${word.pronunciation.all}/`;
+    }
     dictionary.appendChild(syllables);
     dictionary.innerHTML += " ";//add a space
     dictionary.appendChild(pronunciation);
@@ -884,41 +111,43 @@ function dictionary(word) {
     let currentPOS;//part of speech as we loop thru all the definitions
     let results = word.results;
     let definitionIndex = 1;
-    for (let i = 0; i < results.length; i++) {
-        if (results[i].partOfSpeech !== currentPOS) {
-            definitionIndex = 1;
-            currentPOS = results[i].partOfSpeech;
-            console.log(currentPOS);
-            const partOfSpeech = document.createElement("span");
-            partOfSpeech.classList.add("part-of-speech");
-            partOfSpeech.textContent = currentPOS + ".";
-            dictionary.appendChild(partOfSpeech);
-            dictionary.innerHTML += " ";
+    if (results) {
+        for (let i = 0; i < results.length; i++) {
+            if (results[i].partOfSpeech !== currentPOS) {
+                definitionIndex = 1;
+                currentPOS = results[i].partOfSpeech;
+                console.log(currentPOS);
+                const partOfSpeech = document.createElement("span");
+                partOfSpeech.classList.add("part-of-speech");
+                partOfSpeech.textContent = currentPOS + ".";
+                dictionary.appendChild(partOfSpeech);
+                dictionary.innerHTML += " ";
+            }
+            const defNum = document.createElement("span");
+            const definition = document.createElement("span");
+            defNum.classList.add("definition-number");
+            definition.classList.add("definition");
+            defNum.textContent = `${definitionIndex}. `
+            definition.textContent = `${results[i].definition}. `;
+            dictionary.appendChild(defNum);
+            dictionary.appendChild(definition);
+            definitionIndex++;
         }
-        const defNum = document.createElement("span");
-        const definition = document.createElement("span");
-        defNum.classList.add("definition-number");
-        definition.classList.add("definition");
-        defNum.textContent = `${definitionIndex}. `
-        definition.textContent = `${results[i].definition}. `;
-        dictionary.appendChild(defNum);
-        dictionary.appendChild(definition);
-        definitionIndex++;
     }
 }
-setInterval(function () {//blink cursor
+function blink() {//blink cursor
     cursorBlink = !cursorBlink;
     if (cursorBlink) {
         document.querySelector(".cursor").classList.add("cursor-blink");
     } else {
         document.querySelector(".cursor").classList.remove("cursor-blink");
     }
-}, 250);
-setInterval(function () {//update words per minute
+}
+function wordsPerMinute() {//update words per minute
     const currentTime = new Date();
     const diff = currentTime - startTime;//time since start in ms
     const wpm = (typedText.length / (diff / 1000)) * 60 / 5;//5 characters per word
     //console.log(wpm);
     document.querySelector("#score h1").textContent = wpm.toFixed(3) + " WPM";
-}, 1000 / 60);
+}
 
