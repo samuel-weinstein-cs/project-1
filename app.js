@@ -114,14 +114,17 @@ function dictionary(word) {
     if (results) {
         for (let i = 0; i < results.length; i++) {
             if (results[i].partOfSpeech !== currentPOS) {
-                definitionIndex = 1;
+
                 currentPOS = results[i].partOfSpeech;
                 console.log(currentPOS);
-                const partOfSpeech = document.createElement("span");
-                partOfSpeech.classList.add("part-of-speech");
-                partOfSpeech.textContent = currentPOS + ".";
-                dictionary.appendChild(partOfSpeech);
-                dictionary.innerHTML += " ";
+                if (currentPOS) {
+                    definitionIndex = 1;
+                    const partOfSpeech = document.createElement("span");
+                    partOfSpeech.classList.add("part-of-speech");
+                    partOfSpeech.textContent = currentPOS + ".";
+                    dictionary.appendChild(partOfSpeech);
+                    dictionary.innerHTML += " ";
+                }
             }
             const defNum = document.createElement("span");
             const definition = document.createElement("span");
@@ -150,4 +153,3 @@ function wordsPerMinute() {//update words per minute
     //console.log(wpm);
     document.querySelector("#score h1").textContent = wpm.toFixed(3) + " WPM";
 }
-
