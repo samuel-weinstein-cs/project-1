@@ -4,7 +4,8 @@ body {
     flex-direction: column;
     justify-content: space-between;
     /* border: 1px solid blue; */
-    min-height: 98vh;/*this is cheating*/
+    min-height: 100vh;/*this is cheating*/
+    margin:0;
     
     
 }

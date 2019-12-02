@@ -176,7 +176,7 @@ function wordsPerMinute() {//update words per minute
 async function createText() {
     let text = "";
     words = [];
-    /*
+    //*
     for (let i = 0; i < 20; i++) {//create 20 words
 
         let word = await axios.get(`${BASE_URL}?random=true`, { headers: { "X-Mashape-Key": API_KEY } });
