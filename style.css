@@ -4,9 +4,18 @@ body {
     flex-direction: column;
     justify-content: space-between;
     /* border: 1px solid blue; */
-    min-height: 98vh;
+    min-height: 98vh;/*this is cheating*/
     
     
+}
+button{
+    border: 1px solid black;
+    padding: 1vw;
+    font-size: 2vw;
+    font-family: unset;
+}
+h1{
+    font-size: 3rem;
 }
 #container{
     display:flex;
@@ -35,9 +44,7 @@ body {
 .untyped{
     color: grey;
 }
-h1{
-    font-size: 3rem;
-}
+
 #dictionary{
     font-size:1.5rem;
     /* border: 1px solid green; */
@@ -56,11 +63,9 @@ h1{
     color: white;
     background-color: black;
 }
+
 #start{
-    border: 1px solid black;
-    padding: 1vw;
-    font-size: 2vw;
-    font-family: unset;
+    
     position: absolute;
     top:50%;
     left:50%;
